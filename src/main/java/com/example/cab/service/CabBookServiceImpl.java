@@ -18,7 +18,6 @@ public class CabBookServiceImpl implements CabBookService {
 	
 	private List<CabDriver> availableCabs = new ArrayList<>();
 	
-    
     @Autowired
     private CabDriverRepository cabDriverRepository;
     @Autowired

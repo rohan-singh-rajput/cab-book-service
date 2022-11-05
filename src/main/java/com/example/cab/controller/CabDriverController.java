@@ -1,6 +1,5 @@
 package com.example.cab.controller;
 
-
 import com.example.cab.Utils.UserNotFoundException;
 import com.example.cab.model.CabDriver;
 import com.example.cab.model.ChooseRide;
@@ -17,30 +16,30 @@ import java.util.List;
 
 @RestController
 public class CabDriverController {
-    @Autowired
-    private CabDriverServiceImpl cabDriverService;
-    @Autowired
-    private CabBookServiceImpl cabBookService;
+	@Autowired
+	private CabDriverServiceImpl cabDriverService;
+	@Autowired
+	private CabBookServiceImpl cabBookService;
 
-    @PostMapping("/cab")
-    public CabDriver addCabDriver(@RequestBody CabDriver cabDriver) {
-        cabDriverService.createCabDriver(cabDriver);
-        return cabDriver;
-    }
+	@PostMapping("/cab")
+	public CabDriver addCabDriver(@RequestBody CabDriver cabDriver) {
+		cabDriverService.createCabDriver(cabDriver);
+		return cabDriver;
+	}
 
-    @GetMapping("/cabs")
-    public List<CabDriver> getCabDrivers() {
-        return cabDriverService.getAllCabDrivers();
-    }
+	@GetMapping("/cabs")
+	public List<CabDriver> getCabDrivers() {
+		return cabDriverService.getAllCabDrivers();
+	}
 
-    @PostMapping("/find_rides")
-    private List<CabDriver> findRides(@RequestBody RideDetails rideDetails) throws UserNotFoundException {
-        return cabBookService.findRides(rideDetails);
-    }
-    
-    @PostMapping("/choose_ride")
-    private String chooseRide(@RequestBody ChooseRide ride) {
-    	return cabBookService.chooseRide(ride);
-    }
+	@PostMapping("/find_rides")
+	private List<CabDriver> findRides(@RequestBody RideDetails rideDetails) throws UserNotFoundException {
+		return cabBookService.findRides(rideDetails);
+	}
+
+	@PostMapping("/choose_ride")
+	private String chooseRide(@RequestBody ChooseRide ride) {
+		return cabBookService.chooseRide(ride);
+	}
 
 }
