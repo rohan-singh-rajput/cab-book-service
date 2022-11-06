@@ -62,10 +62,11 @@ public class CabBookServiceImpl implements CabBookService {
 			for (CabDriver cab : availableCabs) {
 				if (cab.getName().equals(ride.getCabDriverName())) {
 					cab.setAvailable(false);
+					availableCabs.remove(cab);
 					return "Booked by " + ride.getUserName() + " " + ride.getCabDriverName();
 				}
 			}
 		}
-		return "No Nearby Cabs";
+		return "No Nearby Cabs Found";
 	}
 }
