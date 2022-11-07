@@ -1,6 +1,15 @@
 # cab-book-service
 
 #####
+Url end points
+* Add User - POST 
+```localhost:8080/user ```
+* Add Cab - POST
+```localhost:8080/cab ```
+* Find Nearby Cabs - POST
+```localhost:8080/find_rides ```
+* Choose Ride - POST
+``` localhost:8080/choose_ride ```
 
 
 ##### 
@@ -50,3 +59,10 @@ Json Inputs for controller end points
     "cabDriverName": "Driver1"
 }
 ```
+
+
+
+#####
+Tech Used
+
+[![My Skills](https://skills.thijs.gg/icons?i=java,spring,idea&theme=light)](https://skills.thijs.gg)
