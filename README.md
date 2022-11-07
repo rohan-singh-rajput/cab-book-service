@@ -82,11 +82,11 @@ Tech Used
 ## TODOs
 
 ### Todo
-- [ ] Create Mongo DB Backend for API
 - [ ] Use GeoMapping for location of entities on Maps
 - [ ] Update Cab Booking service
 
 ### In Progress
+- [ ] Create Mongo DB Backend for API
 - [ ] Work on Validation of duplicate add of cabs
 - [ ] Input validation for driver parameter in choose ride service
 
