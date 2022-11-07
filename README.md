@@ -1,6 +1,10 @@
 # cab-book-service
 
 #####
+To Run Application
+```java -jar .\cab-0.0.1-SNAPSHOT.jar ```
+
+#####
 Url end points
 * Add User - POST 
 ```localhost:8080/user ```
