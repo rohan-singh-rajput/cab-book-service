@@ -8,17 +8,17 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CabDriverServiceImpl  implements  CabDriverService{
+public class CabDriverServiceImpl implements CabDriverService{
     @Autowired
     private CabDriverRepository cabDriverRepository;
 
     @Override
     public CabDriver createCabDriver(CabDriver cabDriver) {
-        return cabDriverRepository.addCabDriver(cabDriver);
+        return cabDriverRepository.insert(cabDriver);
     }
 
     @Override
     public List<CabDriver> getAllCabDrivers() {
-        return cabDriverRepository.getDriverDetails();
+        return cabDriverRepository.findAll();
     }
 }

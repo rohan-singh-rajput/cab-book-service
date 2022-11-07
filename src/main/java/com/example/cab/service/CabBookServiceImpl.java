@@ -34,7 +34,7 @@ public class CabBookServiceImpl implements CabBookService {
 			throw new UserNotFoundException("User Not Found");
 		}
 
-		for (CabDriver cabs : cabDriverRepository.getDriverDetails()) {
+		for (CabDriver cabs : cabDriverRepository.findAll()) {
 			if (distanceBetweenEndPoints(rideDetails.getStart(), cabs.getLocation()) <= 5 && cabs.isAvailable()) {
 				availableCabs.add(cabs);
 			}
@@ -48,7 +48,7 @@ public class CabBookServiceImpl implements CabBookService {
 	}
 
 	private boolean ifUserAvailable(String name) {
-		for (User user : userRepository.getAllUsers()) {
+		for (User user : userRepository.findAll()) {
 			if (user.getName().equals(name)) {
 				return true;
 			}
