@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 public class CabDriverController {
+
 	@Autowired
 	private CabDriverServiceImpl cabDriverService;
 	@Autowired
@@ -33,12 +34,12 @@ public class CabDriverController {
 	}
 
 	@PostMapping("/find_rides")
-	private List<CabDriver> findRides(@RequestBody RideDetails rideDetails) throws UserNotFoundException {
+	public List<CabDriver> findRides(@RequestBody RideDetails rideDetails) throws UserNotFoundException {
 		return cabBookService.findRides(rideDetails);
 	}
 
 	@PostMapping("/choose_ride")
-	private String chooseRide(@RequestBody ChooseRide ride) {
+	public String chooseRide(@RequestBody ChooseRide ride) {
 		return cabBookService.chooseRide(ride);
 	}
 

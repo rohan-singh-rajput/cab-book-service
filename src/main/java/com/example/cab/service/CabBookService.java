@@ -9,9 +9,9 @@ import java.util.List;
 public interface CabBookService {
 //    public RideDetails saveRideDetails(RideDetails rideDetails);
 
-    public List<RideDetails> getAllRideDetails();
+	public List<RideDetails> getAllRideDetails();
 
-    public List<CabDriver> findRides(RideDetails rideDetails) throws UserNotFoundException;
-    
-    public String chooseRide(ChooseRide ride);
+	public List<CabDriver> findRides(RideDetails rideDetails) throws UserNotFoundException;
+
+	public String chooseRide(ChooseRide ride);
 }

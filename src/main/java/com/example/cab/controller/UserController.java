@@ -1,7 +1,5 @@
 package com.example.cab.controller;
 
-import com.example.cab.model.CabDriver;
-import com.example.cab.model.RideDetails;
 import com.example.cab.model.User;
 import com.example.cab.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +13,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserServiceImpl userServiceImpl;
+    
 
     @PostMapping("/user")
     public User addUser(@RequestBody User user) {

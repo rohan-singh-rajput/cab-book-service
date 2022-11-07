@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "7a42f32e-aff4-4df6-ad9a-e595d4c423b8",
+		"name": "OlaUber",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20681990"
+	},
+	"item": [
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"rohan4\",\r\n        \"gender\": \"M\",\r\n        \"age\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add cab",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"driver 2\",\r\n        \"gender\": \"M\",\r\n        \"age\": 23,\r\n        \"carDetails\": \"Swift, KA-01-12345\",\r\n        \"location\": {\r\n            \"x\": 16,\r\n            \"y\": 20\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cab",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all cabs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cabs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cabs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find nearby cabs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rohan\",\r\n    \"start\":{\r\n        \"x\":20,\r\n        \"y\":60\r\n    },\r\n    \"end\":{\r\n        \"x\":89,\r\n        \"y\":63\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/find_rides",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"find_rides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "choose ride",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Rohan\",\r\n    \"cabDriverName\":\"Driver 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/choose_ride",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"choose_ride"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

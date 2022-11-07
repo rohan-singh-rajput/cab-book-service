@@ -47,7 +47,7 @@ public class CabBookServiceImpl implements CabBookService {
 				+ ((cab.getX() - user.getX()) * (cab.getX() - user.getX())));
 	}
 
-	public boolean ifUserAvailable(String name) {
+	private boolean ifUserAvailable(String name) {
 		for (User user : userRepository.getAllUsers()) {
 			if (user.getName().equals(name)) {
 				return true;
@@ -66,6 +66,9 @@ public class CabBookServiceImpl implements CabBookService {
 					return "Booked by " + ride.getUserName() + " " + ride.getCabDriverName();
 				}
 			}
+		}
+		if (availableCabs.size() == 0) {
+			return "No Nearby Cabs Found";
 		}
 		return "No Nearby Cabs Found";
 	}
