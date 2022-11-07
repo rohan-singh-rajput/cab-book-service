@@ -27,10 +27,10 @@ Url end points
 Json Inputs for controller end points
 * Add User
 ```javascript
-   {
-        "name": "demo name 1",
-        "gender": "M",
-        "age": 25
+{
+    "name": "demo name",
+    "gender": "M",
+    "age": 23
 }
 ```
 
