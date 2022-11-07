@@ -4,6 +4,10 @@
 Url end points
 * Add User - POST 
 ```localhost:8080/user ```
+* Get Users
+```localhost:8080/users```
+* Get Cabs
+```localhost:8080/cabs```
 * Add Cab - POST
 ```localhost:8080/cab ```
 * Find Nearby Cabs - POST
